@@ -7,6 +7,7 @@ public final class Safe {
 	public static String ACTION;
 	public static String PARAM1;
 	public static String PARAM2;
+	public static String PARAM3;
 
 	public static String ASP_BASE64;
 	public static String ASP_MAKE;
@@ -85,9 +86,21 @@ public final class Safe {
 	public static String CUS_UPLOAD;
 	public static String CUS_DOWNLOAD;
 	public static String CUS_SHELL;
+	public static String CUS_SHELL_SPL;
+	public static String CUS_SHELL_SPR;
 	
 	public static String COMMON_SQL_STRING;
 	
 	public static String PASS;
 	public static String SYSTEMSP;
+	
+	public static String PROXY_HOST;
+	public static String PROXY_PORT;
+	public static String PROXY_USER;
+	public static String PROXY_PASS;
+	public static String PROXY_TYPE;
+	public static String PROXY_STATUS;
+	
+	public static String REQUEST_STATUS;
+	public static String REQUEST_DATA;
 }

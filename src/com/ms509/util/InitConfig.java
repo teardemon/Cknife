@@ -32,7 +32,7 @@ public class InitConfig {
 		config.setValue("ACTION", "action");
 		config.setValue("PARAM1", "z1");
 		config.setValue("PARAM2", "z2");
-		
+		config.setValue("PARAM3", "z3");
 		
 		
 		
@@ -98,11 +98,11 @@ public class InitConfig {
 		config.setValue("JSP_UPLOAD", "G");
 		config.setValue("JSP_DOWNLOAD", "F");
 		config.setValue("JSP_SHELL", "M");
-		config.setValue("JSP_DB_MYSQL", "com.mysql.jdbc.Driverchoraheiheiheijdbc%3Amysql%3A%2F%2Flocalhost%2Ftestdb%3Fuser%3Dusername%26password%3Duserpwd");
+		config.setValue("JSP_DB_MYSQL", "com.mysql.jdbc.Driverchoraheiheiheijdbc%3Amysql%3A%2F%2Flocalhost%2Ftestdbchoraheiheiheiusernamechoraheiheiheiuserpwd");
 		config.setValue("JSP_DB_MSSQL", "com.microsoft.sqlserver.jdbc.SQLServerDriverchoraheiheiheijdbc%3Asqlserver%3A%2F%2Flocalhost%3BdatabaseName%3Dtestdb%3Bchoraheiheiheiusernamechoraheiheiheiuserpwd");
 		config.setValue("JSP_DB_ORACLE", "oracle.jdbc.driver.OracleDriverchoraheiheiheijdbc%3aoracle%3athin%3a%40localhostchoraheiheiheiusernamechoraheiheiheiuserpwdchoraheiheiheitestdb");
 		
-		config.setValue("COMMON_SQL_STRING", "SHOW DATABASES;|||SQL2;");
+		config.setValue("COMMON_SQL_STRING", "SHOW DATABASES;|||SHOW TABLES;");
 		
 		config.setValue("CUS_MAKE", "1");
 		config.setValue("CUS_INDEX", "index");
@@ -115,6 +115,16 @@ public class InitConfig {
 		config.setValue("CUS_UPLOAD", "upload");
 		config.setValue("CUS_DOWNLOAD", "download");
 		config.setValue("CUS_SHELL", "shell");
+		
+		config.setValue("PROXY_HOST","");
+		config.setValue("PROXY_PORT","");
+		config.setValue("PROXY_USER","");
+		config.setValue("PROXY_PASS","");
+		config.setValue("PROXY_TYPE","");
+		config.setValue("PROXY_STATUS", Common.getProxyStatus());
+		
+		config.setValue("REQUEST_DATA", "");
+		config.setValue("REQUEST_STATUS", "");
 	}
 
 	private void LoadParams() {
@@ -125,7 +135,9 @@ public class InitConfig {
 		Safe.ACTION = config.getValue("ACTION");
 		Safe.PARAM1 = config.getValue("PARAM1");
 		Safe.PARAM2 = config.getValue("PARAM2");
-
+		Safe.PARAM3 = config.getValue("PARAM3");
+		
+		
 		Safe.PHP_BASE64 = config.getValue("PHP_BASE64");
 		Safe.PHP_MAKE = config.getValue("PHP_MAKE");
 		Safe.PHP_INDEX = config.getValue("PHP_INDEX");
@@ -212,5 +224,18 @@ public class InitConfig {
 		Safe.CUS_UPLOAD = config.getValue("CUS_UPLOAD");
 		Safe.CUS_DOWNLOAD = config.getValue("CUS_DOWNLOAD");
 		Safe.CUS_SHELL = config.getValue("CUS_SHELL");
+		Safe.CUS_SHELL_SPL = config.getValue("CUS_SHELL_SPL");
+		Safe.CUS_SHELL_SPR = config.getValue("CUS_SHELL_SPR");
+		
+		Safe.PROXY_HOST = config.getValue("PROXY_HOST");
+		Safe.PROXY_PORT = config.getValue("PROXY_PORT");
+		Safe.PROXY_USER = config.getValue("PROXY_USER");
+		Safe.PROXY_PASS = config.getValue("PROXY_PASS");
+		Safe.PROXY_TYPE = config.getValue("PROXY_TYPE");
+		Safe.PROXY_STATUS = Common.getProxyStatus();
+		
+		Safe.REQUEST_DATA = config.getValue("REQUEST_DATA");
+		Safe.REQUEST_STATUS = config.getValue("REQUEST_STATUS");
+		Common.getData();
 	}
 }
